@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* max빼면 브라우저 창 크기 줄였을 때 하단에 스크롤 생김 */
+/* .container {
+
+  max-width: 1000px;
+  margin: 0 auto;
+  border: 5px solid palevioletred;
+} */
+
+/* float: left를 사용하면 높이값이 사라지기 때문에 하는거래...뭐지.. */
+/* .container::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.row {
+  margin: 0 -20px;
+}
+
+.nemo {
+  height: 150px;
+  width: 25%;
+  float: left;
+}
+
+.inner {
+  height: 100%;
+  margin: 0 20px;
+  background: royalblue;
+}
+
+@media screen and (max-width:768px) {
+  .nemo {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width:580px) {
+  .nemo {
+    width: 100%;
+  }
+} */
+body {
+  background: #2f2f36;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 50px;
+}
+.grid {
+  padding: 5px;
+  background: #fff;
+}
+
+.grid::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.box {
+  float: left;
+}
+
+.in {
+  height: 150px;
+  text-align: center;
+  margin: 5px;
+}
+
+/* layout에 관여하는 부분 */
+.b01 { width: 80%;}
+.b02 { width: 20%;}
+.b03 { width: 40%;}
+.b04 { width: 20%;}
+.b05 { width: 30%;}
+.b06 { width: 10%;}
+.b07 { width: 25%;}
+.b08 { width: 25%;}
+.b09 { width: 25%;}
+.b10 { width: 25%;}
+
+
+
+/* contents에 관여하는 부분 */
+.b01 .in { background: peru;}
+.b02 .in { background: cornflowerblue;}
+.b03 .in { background: LightCoral;}
+.b04 .in { background: lightpink;}
+.b05 .in { background: LightSeaGreen;}
+.b06 .in { background: Orchid;}
+.b07 .in { background: OliveDrab;}
+.b08 .in { background: LightSalmon;}
+.b09 .in { background: YellowGreen;}
+.b10 .in { background: SteelBlue;}
+
+@media screen and (min-width:1200px) {
+  .wrapper {
+    /* 일정 크기 이상은 컨텐츠의 크기가 늘어나지 않도록 해줌 */
+    max-width: 1200px;
+  }
+}
+@media screen and (max-width:1024px) {
+  .box {
+    width: 33.3%;
+  }
+  .box.b01 {
+    width: 100%;
+  }
+
+}
+@media screen and (max-width:768px) {
+  .wrapper {
+    margin: 0;
+    padding: 0;
+  }
+  .box {
+    width: 50%;
+  }
+  .b01, .b10 {
+    width: 100%;
+  }
+}
+@media screen and (max-width:580px) {
+  .box {
+    width: 100%;
+  }
+}
